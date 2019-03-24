@@ -1,5 +1,5 @@
 const sgMail = require('@sendgrid/mail')
-const API = require('../config/api')
+// const API = require('../config/api')
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 // sgMail.setApiKey(API)
