@@ -25,7 +25,7 @@ const sendCancelationEmail = (email, name) => {
 }
 
 const sendJobEmail = (emailFrom, text) => sgMail.send({
-  to: 'elrey33@gmail.com',
+  to: 'kontakt@radoslawkazmierczak.pl',
   from: emailFrom,
   subject: 'PORTFOLIO',
   text,
