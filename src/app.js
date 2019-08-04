@@ -1,7 +1,18 @@
-// require('./db/mongoose')
-// const Task = require('./models/task')
+require('dotenv').config({ path: './src/config/.env' })
+const express = require('express')
+const bodyParser = require('body-parser')
 
-// Task.findByIdAndDelete('5c8a3c897ff27d18ec22b49d')
-//   .then(() => Task.countDocuments({ completed: false }))
-//   .then(data => console.log(data))
-//   .catch(err => console.log(err))
+require('./db/mongoose')
+
+
+const userRouter = require('./routers/users')
+const tasksRouter = require('./routers/tasks')
+
+const app = express()
+
+app.use(express.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(userRouter)
+app.use(tasksRouter)
+
+module.exports = app
