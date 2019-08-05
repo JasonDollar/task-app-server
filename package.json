@@ -6,10 +6,10 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "set NODE_ENV=development && nodemon src/index.js",
-    "test": "set NODE_ENV=test && jest --watch --runInBand"
+    "test": "set NODE_ENV=test&& jest --watch --runInBand"
   },
   "jest": {
-    "testEnviroment": "node"
+    "testEnvironment": "node"
   },
   "author": "JD",
   "license": "ISC",
